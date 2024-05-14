@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #ffdee9; /* Culoare de fundal deschisă */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  color: #333;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Stilizare pentru containerul video */
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  background-size: cover;
+}
+
+/* Stilizare pentru conținutul din fața videoclipului */
+#content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  max-width: 1440px;
+  margin: 50px auto;
+}
+
+/* Stilizare pentru logo */
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  z-index: 1000; /* Asigură că imaginea logo-ului este deasupra videoclipului */
+}
+
+.logo-container img {
+  width: 150px; /* Ajustează dimensiunea imaginii conform preferințelor tale */
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+/* Stilizare pentru linkurile din bara de navigație */
+.navbar a {
+  padding: 14px 20px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Stilizare pentru hover pe linkuri */
+.navbar a:hover {
+  background-color: #555;
+}
+
+#backgroundAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    0deg,
+    #ffdee9 0%,
+    #b5fffc 100%
+  ); /* Gradient de culoare */
+  animation: animateBackground 15s linear infinite alternate; /* Animație pentru gradient */
+}
+
+@keyframes animateBackground {
+  0% {
+    background-position: 0% 0%; /* Poziția inițială a gradientului */
+  }
+  100% {
+    background-position: 100% 100%; /* Poziția finală a gradientului */
+  }
+}

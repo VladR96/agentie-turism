@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despre Noi</title>
+    <style>
+        /* Stilizare pentru bara de navigație */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        /* Stilizare pentru butoanele din bara de navigație */
+        .navbar button {
+            padding: 14px 20px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Stilizare pentru hover pe butoane */
+        .navbar button:hover {
+            background-color: #555;
+        }
+ /* Stilizare pentru secțiunea motive pentru alegerea noastră */
+ .reasons-section {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            margin-top: 50px;
+        }
+
+        .reasons-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .reasons-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        .reason {
+            width: 30%;
+            text-align: center;
+        }
+
+        .reason img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        /* Stilizare pentru întregul corp al paginii */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh; /* Ocupă toată înălțimea vizibilă a ferestrei */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background-color: #000; /* Culoare de fundal pentru cazul în care video-ul nu este disponibil */
+            overflow: hidden; /* Ascunde scrollbar-ul */
+        }
+
+        /* Stilizare pentru containerul video */
+        #video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1000;
+            object-fit: cover;
+        }
+
+        /* Stilizare pentru conținutul din fața videoclipului */
+        #content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Stilizare pentru logo */
+        .logo-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001; /* Asigură că logo-ul este peste videoclip */
+        }
+
+        .logo-container img {
+            width: 150px; /* Ajustează dimensiunea imaginii conform preferințelor tale */
+            height: auto;
+        }
+
+        /* Stilizare pentru containerul de imagini echipei */
+        .team-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        /* Stilizare pentru fiecare membru al echipei */
+        .team-member {
+            margin: 0 20px;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 300px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bară de Navigație -->
+    <nav class="navbar">
+        <!-- Butoane pentru navigare -->
+        <button onclick="redirectToPage('index.html')">Acasă</button>
+        <button onclick="redirectToPage('despre.html')">Despre Noi</button>
+        <button onclick="redirectToPage('zboruri.html')">Zboruri</button>
+        <button onclick="redirectToPage('contact.html')">Contact</button>
+    </nav>
+
+    <!-- Logo în colțul din dreapta sus -->
+    <div class="logo-container">
+        <img src="img/Logo-VladTur-V1.png" alt="Logo">
+    </div>
+    <!-- Secțiunea motive pentru alegerea noastră -->
+    <div class="reasons-section">
+        <h2>De ce să ne alegeți pe noi?</h2>
+        <div class="reasons-container">
+            <!-- Motivul 1 -->
+            <div class="reason">
+                <img src="img/exotic.jpg" alt="Motiv 1">
+                <p>Destinații exotice și variate
+                    <hr>Peisaje montane spectaculoase<hr>
+                    <hr>Orașe vibrante și culturale<hr>
+                    <hr>Faună și floră exotice<hr>
+
+                </p>
+            </div>
+            <!-- Motivul 2 -->
+            <div class="reason">
+                <img src="img/echipa.jpg" alt="Motiv 2">
+                <p>Echipa în acțiune</p>
+                <hr>Peisaje montane spectaculoase<hr>
+                    <hr>Zâmbete și entuziasm<hr>
+                    <hr>Interacțiune autentică<hr>
+            </div>
+            <!-- Motivul 3 -->
+            <div class="reason">
+                <img src="img/vacante.jpg" alt="Motiv 3">
+                <p>Experiențe de vacanță personalizate</p>
+                <hr>Consultanță Expertă<hr>
+                <hr>Flexibilitate în Planificare<hr>
+                <hr>Activități Unice<hr>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Video background -->
+    <video autoplay muted loop id="video-background">
+        <source src="img/desp.mp4" type="video/mp4">
+        <!-- Dacă browser-ul nu poate reda videoclipul, poți oferi o imagine de rezervă aici -->
+        <!-- <img src="img/background-image.jpg" alt="Background Image"> -->
+    </video>
+
+    <!-- Conținutul din fața videoclipului -->
+    <div id="content">
+        <h1>Despre Noi</h1>
+        <p>Suntem o companie dedicată oferirii experiențelor de vacanță de neuitat.</p>
+        <p>Cu o echipă pasionată și o gamă variată de destinații, suntem aici pentru tine!</p>
+
+        <!-- Container pentru echipa -->
+        <div class="team-container">
+            <!-- Membru echipă 1 -->
+            <div class="team-member">
+                <img src="img/manager_general.png" alt="Membru Echipă 1">
+                <p>Ion Popescu<br>Manager General</p>
+            </div>
+            <!-- Membru echipă 2 -->
+            <div class="team-member">
+                <img src="img/consultant_turistic.png" alt="Membru Echipă 2">
+                <p>Ana Ionescu<br>Consultant Turistic</p>
+            </div>
+            <!-- Membru echipă 3 -->
+            <div class="team-member">
+                <img src="img/Specialist Destinatii.png" alt="Membru Echipă 3">
+                <p>Mihai Andreescu<br>Specialist Destinații</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript pentru redirecționare -->
+    <script>
+        // Funcție pentru redirecționare către pagină
+        function redirectToPage(page) {
+            console.log('Redirecting to:', page); // Afișează în consolă pagina către care se redirecționează
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

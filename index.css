@@ -1,0 +1,54 @@
+/* Stilizare pentru lista de hoteluri */
+.countries-list {
+  margin-top: 150px; /* Spațierea superioară mai mare pentru lista de carduri */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Stilizare pentru fiecare card de hotel */
+.country-card {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer; /* Transformă cursorul într-o mână atunci când mouse-ul trece peste card */
+}
+
+.country-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+#reviews {
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.review-card {
+  display: inline-block;
+  width: 30%;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.review-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.review-card strong {
+  font-weight: bold;
+}

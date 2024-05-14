@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zboruri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Ascunde scrollbar-ul */
+            height: 100vh; /* Ocupă întreaga înălțime a ecranului */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000; /* Culoare de fundal pentru cazul în care video-ul nu este disponibil */
+        }
+
+        video {
+            position: fixed;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.7); /* Fundal semi-transparent pentru bara de navigare */
+            color: #fff;
+            padding: 10px 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            text-align: center;
+            z-index: 1; /* Asigură că conținutul este peste fundalul video */
+        }
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.7); /* Fundal semi-transparent pentru subsol */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<video autoplay muted loop>
+    <source src="img/zbor.mp4" type="video/mp4">
+    <!-- În cazul în care browser-ul nu suportă video -->
+    <p>Videoclipul nu poate fi redat. Vă rugăm să utilizați un browser compatibil.</p>
+</video>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="zboruri.html">Zboruri</a></li>
+            <li><a href="rezervare.html">Rezervare</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="content">
+    <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+        <h1 style="color: #fff; text-align: center;">Informații despre Zboruri</h1>
+        <p style="color: #fff; text-align: center; font-size: 18px; line-height: 1.6;">
+            Aici puteți găsi informații relevante despre zborurile disponibile. Vă invităm să explorați opțiunile noastre și să rezervați următoarea călătorie cu noi.
+        </p>
+        <p style="color: #fff; text-align: center; font-size: 16px;">
+            Pentru detalii precise despre zboruri, puteți accesa <a href="https://www.airmoldova.md" target="_blank" style="color: #fff; text-decoration: underline;">airmoldova.md</a>.
+        </p>
+    </div>
+</section>
+
+
+<footer>
+    <p>&copy; 2024 Compania de Zboruri. Toate drepturile rezervate.</p>
+</footer>
+
+</body>
+</html>

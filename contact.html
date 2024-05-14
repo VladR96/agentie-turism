@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff; /* Schimbăm culoarea textului la alb pentru contrast */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Înălțimea paginii este 100% din viewport */
+            overflow: hidden; /* Ascundem overflow-ul pentru a preveni scroll-ul orizontal */
+            background-color: #000; /* Setăm culoarea de fundal la negru */
+        }
+
+        #video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajustăm videoclipul să acopere întreaga zonă */
+            z-index: -1; /* Poziționăm videoclipul sub conținutul HTML */
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundal semi-transparent pentru conținut */
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        /* Stilizare pentru bara de navigație */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundal semi-transparent pentru navbar */
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Stilizare pentru linkurile din navbar */
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+            padding: 8px;
+            transition: color 0.3s ease;
+        }
+
+        /* Stil pentru hover pe linkurile din navbar */
+        .navbar a:hover {
+            color: #ffc107;
+        }
+         /* Stilizare pentru logo */
+         .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            z-index: 1000; /* Asigură că imaginea logo-ului este deasupra videoclipului */
+        }
+
+        .logo-container img {
+            width: 150px; /* Ajustează dimensiunea imaginii conform preferințelor tale */
+            height: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Logo în colțul din dreapta sus -->
+<div class="logo-container">
+    <img src="img/Logo-VladTur-V1.png" alt="Logo">
+</div>
+    <!-- Videoclipul de fundal -->
+    <video autoplay muted loop id="video-background">
+        <source src="img/cont.mp4" type="video/mp4">
+        <!-- Înlocuiește "path_to_your_video.mp4" cu calea către videoclipul tău -->
+    </video>
+
+    <div class="container">
+        <!-- Bara de navigație -->
+        <div class="navbar">
+            <div>
+                <a href="index.html">Acasă</a>
+                <a href="despre.html">Despre Noi</a>
+                <a href="zboruri.html">Zboruri</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div>
+                <a href="tel:+37360458873">+373 60 458 873</a>
+                <a href="https://www.instagram.com/nume-utilizator/" target="_blank">Instagram</a>
+                <a href="https://web.telegram.org/#/im?p=@username" target="_blank">Telegram</a>
+            </div>
+        </div>
+
+        <!-- Continutul paginii de contact -->
+        <h1>Contactează-ne</h1>
+        <p>Sediul nostru: Stefan Cel Mare 17, Chisinau, Moldova</p>
+        <p>Telefon: +373 60 458 873</p>
+        <p>Instagram: <a href="https://www.instagram.com/nume-utilizator/" target="_blank">@VladTur</a></p>
+        <p>Telegram: <a href="https://web.telegram.org/#/im?p=@username" target="_blank">@VladTur</a></p>
+    </div>
+</body>
+</html>

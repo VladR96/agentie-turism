@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezerva hotel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="book.css">
+</head>
+
+<body>
+    <!-- Bară de Navigație -->
+    <nav class="navbar">
+        <!-- Butoane pentru navigare -->
+        <a href="index.html"">Acasă</a>
+        <a href=" despre.html">Despre Noi</a>
+        <a href="zboruri.html">Zboruri</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="logo-container">
+        <img src="img/Logo-VladTur-V1.png" alt="Logo">
+    </div>
+
+     <!-- Video background -->
+     <video autoplay muted loop id="video-background">
+        <source src="img/turc.mp4" type="video/mp4">
+    </video>
+
+       
+        <div id="content">
+            <div>
+                <h1>Forma pentru rezervarea hotelului</h1>
+            </div>
+            <form id="bookForm" class="hotel-book-form">
+                <div>
+                <label for="nume">Nume:</label>
+                <input type="text" id="nume" name="nume" required>
+            </div>
+            <div>
+                <label for="prenume">Prenume:</label>
+                <input type="text" id="prenume" name="prenume" required>
+            </div>
+            <div>
+                <label for="nrPersoane">Număr de persoane:</label>
+                <input type="number" id="nrPersoane" name="nrPersoane" required>
+            </div>
+            <div>
+                <label for="adulti" >Adulti</label>
+                <input type="number" id="adulti" name="adulti" required>
+            </div>
+            <div>
+                <label for="copii">Copii</label>
+                <input type="number" id="copii" name="copii" required>
+            </div>
+                <button type="submit">Rezervă</button>
+            </form>
+        </div>
+
+    <script async src="book.js"></script>
+</body>
+
+</html>

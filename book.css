@@ -1,0 +1,42 @@
+.hotel-book-form {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  max-width: 726px;
+  margin: 50px auto;
+}
+
+.hotel-book-form label {
+  color: #fff;
+  font-size: 18px;
+  display: block;
+  text-align: left;
+}
+
+.hotel-book-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+
+.hotel-book-form div {
+  width: 100%;
+}
+
+.hotel-book-form button {
+  background-color: orange;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
